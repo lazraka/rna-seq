@@ -8,7 +8,7 @@ library(tidyverse)
 library(cowplot)
 library(RColorBrewer)
 
-pbmc.data <- Read10X(data.dir = "/Users/aminalazrak/Documents/UCLA/Biomathematics/Final Project/Raw files/filtered_gene_bc_matrices/hg19/")
+pbmc.data <- Read10X(data.dir = "")
 
 install.packages("Matrix")
 install.packages("ISLR")
@@ -31,12 +31,12 @@ library(raster)
 library(edgeR)
 library(irlba)
 
-matrix.path = "~/Documents/UCLA/Biomathematics/Final Project/Raw Files/GSE132044_cortex_mm10_count_matrix.mtx"
+matrix.path = "~/GSE132044_cortex_mm10_count_matrix.mtx"
 
 cortex_mat <- readMM(file = matrix.path)
 
-wells.path <- "~/Documents/UCLA/Biomathematics/Final Project/Raw Files/GSE132044_cortex_mm10_cell.tsv"
-features.path <- "~/Documents/UCLA/Biomathematics/Final Project/Raw Files/GSE132044_cortex_mm10_gene.tsv"
+wells.path <- "~/GSE132044_cortex_mm10_cell.tsv"
+features.path <- "~/GSE132044_cortex_mm10_gene.tsv"
 
 feature.names = read.delim(features.path, header = FALSE, stringsAsFactors = FALSE)
 wells.names = read.delim(wells.path, header = FALSE, stringsAsFactors = FALSE)
